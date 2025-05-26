@@ -4,7 +4,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxV
 # Author: bitheral
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 
-APP="LEMP"
+APP="debian"
 var_tags="${var_tags:-os}"
 var_cpu="${var_cpu:-1}"
 var_ram="${var_ram:-512}"
