@@ -40,6 +40,8 @@ description
 # ---- LEMP INSTALLATION START ----
 msg_info "Installing LEMP Stack"
 lxc-attach -n $CTID -- bash -c "
+  apt-get update -qq &&
+  apt-get install -qq -y lsb-release &&
   dpkg -l | grep php | tee packages.txt >/dev/null &&
   apt-get install -qq -y apt-transport-https &&
   curl -sSLo /usr/share/keyrings/deb.sury.org-php.gpg https://packages.sury.org/php/apt.gpg &&
